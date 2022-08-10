@@ -35,3 +35,13 @@ function nuevoProducto() {
     const prodNuevo = new Producto(nombre, contenidoNeto, precio, stock)
     console.log(prodNuevo)
 }
+
+function recorrerElementos() {
+    for (let producto of productos) {
+        console.table(producto)
+    }
+
+
+
+
+}
