@@ -25,7 +25,7 @@ const prod2 = new Producto("cerveza ipa",500, 150, 400)
 const prod3 = new Producto("cerveza blonde ale maracuya",500, 130, 300)
 const prod4 = new Producto("barril blonde ale",30000, 3000, 20)
 const prod5 = new Producto("barril ipa",30000, 3500, 20)
-const prod6 = new Producto("barril blonde ale maracuya",3250, 3000, 20)
+const prod6 = new Producto("barril blonde ale maracuya",3250, 3000, 30)
 
 
 const IVA = 1.22
@@ -50,6 +50,7 @@ function generadorAutomatico() {
     productos.push(prod5)
     productos.push(prod6)
     productos.push(new Producto("cerveza amber ale",500, 130, 200))
+    productos.push(new Producto("barril amber ale",30000, 3200, 20))
 
 }
 
