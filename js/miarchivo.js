@@ -7,7 +7,7 @@ class Producto {
     }
     contendioNeto(){
         let contenidoNeto = this.contenidoNeto 
-        return "ml"
+        return contenidoNeto +"ml"
          
 
     }
@@ -20,9 +20,13 @@ class Producto {
     }
 }
 
-const prod1 = new Producto("Cerveza Blonde ale",  500 , 120, 200 )
-const prod2 = new Producto("Cerveza IPA",500, 150, 400)
-const prod3 = new Producto("Cerveza Blonde ale Maracuya",500, 130, 300)
+const prod1 = new Producto("cerveza blonde ale",  500 , 120, 200 )
+const prod2 = new Producto("cerveza ipa",500, 150, 400)
+const prod3 = new Producto("cerveza blonde ale maracuya",500, 130, 300)
+const prod4 = new Producto("barril blonde ale",30000, 3000, 20)
+const prod5 = new Producto("barril ipa",30000, 3500, 20)
+const prod6 = new Producto("barril blonde ale maracuya",3250, 3000, 20)
+
 
 const IVA = 1.22
 
@@ -36,12 +40,28 @@ function nuevoProducto() {
     console.log(prodNuevo)
 }
 
-function recorrerElementos() {
-    for (let producto of productos) {
-        console.table(producto)
-    }
+const productos = [] 
 
+function generadorAutomatico() {
+    productos.push(prod1)
+    productos.push(prod2)
+    productos.push(prod3)
+    productos.push(prod4)
+    productos.push(prod5)
+    productos.push(prod6)
+    productos.push(new Producto("cerveza amber ale",500, 130, 200))
 
+}
 
+function encontrarBarriles(){
+    let barriles = productos.filter(producto => producto.nombre.includes("barril"))
+      console.log(barriles)
+}
 
+function buscarProducto() {
+    let prod = prompt("Ingresa el producto a buscar:")
+      
+        const resultado = productos.find(producto => producto.nombre === prod.toLowerCase())
+         console.log(resultado)
+         
 }
