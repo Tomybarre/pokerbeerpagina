@@ -42,6 +42,10 @@ function nuevoProducto() {
 
 const productos = [] 
 
+
+
+
+
 function generadorAutomatico() {
     productos.push(prod1)
     productos.push(prod2)
@@ -53,6 +57,8 @@ function generadorAutomatico() {
     productos.push(new Producto("barril amber ale",30000, 3200, 20))
 
 }
+
+generadorAutomatico()
 
 function encontrarBarriles(){
     let barriles = productos.filter(producto => producto.nombre.includes("barril"))
@@ -66,3 +72,30 @@ function buscarProducto() {
          console.log(resultado)
          
 }
+
+function agregarProductos() {
+    let nombre = prompt("Ingresa el nombre del Producto:")
+    let contenidoNeto = parseInt(prompt("Ingrese el contenido:"))
+    let precio = parseInt(prompt("Ingrese precio:"))
+    let stock = parseInt(prompt("Ingresa el stock:"))
+        productos.push(new Producto(nombre, contenidoNeto, precio, stock))
+       
+}
+
+
+
+
+function cargarProductos() {
+    
+    const cuerpo = document.getElementById("cuerpo")
+          cuerpo.innerHTML = ""
+          productos.forEach(producto => {
+            cuerpo.innerHTML += `<tr>
+                                    <td>${producto.nombre}</td>
+                                    <td>${producto.contenidoNeto}</td>
+                                    <td>${producto.precio}</td>
+                                    <td>${producto.stock}</td>
+                                </tr>`
+          })
+}
+

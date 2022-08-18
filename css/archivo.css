@@ -41,3 +41,6 @@ a{
 background-color: rgb(165, 162, 162);
 
 }
+.fondo {
+    background-color: red !important;
+}

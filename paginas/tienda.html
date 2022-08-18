@@ -8,6 +8,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/archivo.css">
     <script src="/js/miarchivo.js"></script>
+    <script defer src="/js/eventos.js"></script>
     <title>Poker Beer - Tienda</title>
 
 </head>
@@ -24,12 +25,34 @@
   
 <br>
 <br>
+<div>
+    <input type="text" id="nombre" placeholder="nombre">
+    <input type="namber" id="contenido neto" placeholder="contenido neto">
+    <input type="number" id="precio" placeholder="precio">
+    <input type="number" id="stock" placeholder="stock">
+    <br><br>
+    
+    <button class="button" onclick="buscarProducto()">BUSCAR PRODUCTO</button>
+    <button onclick=" nuevoProducto()">AGREGAR PRODUCTO</button>
+    <button onclick="encontrarBarriles()">BARRILES</button>
+    <button onclick="cargarProductos()">Cargar Productos</button>
+   
+</div>
 
-                <button class="button" onclick="buscarProducto()">BUSCAR PRODUCTO</button>
-                <button onclick=" nuevoProducto()">AGREGAR PRODUCTO</button>
-                <button onclick="encontrarBarriles()">BARRILES</button>
                 
-
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NOMBRE DEL PRODUCTO</th>
+                            <th>CONTENIDO NETO</th>
+                            <th>PRECIO</th>
+                            <th>STOCK</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo">
+                        
+                    </tbody>
+                </table>
 
 
 </body>
