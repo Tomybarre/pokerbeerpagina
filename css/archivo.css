@@ -42,5 +42,8 @@ background-color: rgb(165, 162, 162);
 
 }
 .fondo {
-    background-color: red !important;
+    background-color: rgb(246, 193, 95) !important;
+}
+.fondoboton{
+    background-color: rgba(74, 224, 254, 0.992);
 }

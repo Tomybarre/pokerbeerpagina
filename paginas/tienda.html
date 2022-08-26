@@ -26,15 +26,26 @@
 <br>
 <br>
 <div>
+    <input type="text" id="Buscar Productos" placeholder="Buscar Productos">
+    <button class="button" onclick="buscarProducto()">BUSCAR PRODUCTO</button>
+  
+    <br>
+    <h2 id="productoEncontrado"></h2>
+   
+   
+    <br>
+    <br>
     <input type="text" id="nombre" placeholder="nombre">
     <input type="namber" id="contenido neto" placeholder="contenido neto">
     <input type="number" id="precio" placeholder="precio">
     <input type="number" id="stock" placeholder="stock">
-    <br><br>
+    <br>
+    <br>
     
-    <button class="button" onclick="buscarProducto()">BUSCAR PRODUCTO</button>
-    <button onclick=" nuevoProducto()">AGREGAR PRODUCTO</button>
-    <button onclick="encontrarBarriles()">BARRILES</button>
+    <button onclick="nuevoProducto()" class="fondoboton">AGREGAR PRODUCTO</button>
+    <button onclick="recuperarDatos()">ATRAS</button>
+    <br>
+    <br>
     <button onclick="cargarProductos()">Cargar Productos</button>
    
 </div>
