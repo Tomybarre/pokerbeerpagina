@@ -1,3 +1,5 @@
+const { default: swal } = require("sweetalert")
+
 class Producto {
     constructor(nombre, contenidoNeto, precio, stock) {
         this.nombre = nombre
@@ -20,6 +22,8 @@ class Producto {
     }
 }
 
+const productos = []
+
 const prod1 = new Producto("cerveza blonde ale", 500, 120, 200)
 const prod2 = new Producto("cerveza ipa", 500, 150, 400)
 const prod3 = new Producto("cerveza blonde ale maracuya", 500, 130, 300)
@@ -27,6 +31,16 @@ const prod4 = new Producto("barril blonde ale", 30000, 3000, 20)
 const prod5 = new Producto("barril ipa", 30000, 3500, 20)
 const prod6 = new Producto("barril blonde ale maracuya", 3250, 3000, 30)
 
+/*function cargar() {
+
+
+this.productos.push(prod1)
+this.productos.push(prod2)
+this.productos.push(prod3)
+this.productos.push(prod4)
+this.productos.push(prod5)
+this.productos.push(prod6)
+}*/
 
 const IVA = 1.22
 
@@ -36,13 +50,15 @@ function nuevoProducto() {
     contenidoNeto = document.getElementById("contenido neto").value
     precio = document.getElementById("precio").value
     stock = document.getElementById("stock").value
+/*let prod = new Producto(nombre, contendioNeto, precio, stock)
+this.productos.push(prod)*/
     guardarDatos()
     recuperarDatos()
-    alert("👍Producto guardado")
+    sweetAlert("👍Producto guardado")
 
 }
 
-const productos = []
+
 
 
 
@@ -60,15 +76,16 @@ function generadorAutomatico() {
 
 }
 
-generadorAutomatico()
 
+generadorAutomatico()
 
 
 function buscarProducto() {
 
-        prod = document.getElementById("Buscar Productos").value
-    const resultado = productos.find(producto => producto.nombre === prod.toLowerCase())
-   document.getElementById("productoEncontrado").innerHTML = resultado.nombre + " " + resultado.contenidoNeto + " " + resultado.precio + " " + resultado.stock
+    prod = document.getElementById("Buscar Productos").value
+    const resultado = productos.filter(producto => producto.nombre.includes(prod.toLowerCase()))
+   document.getElementById("productoEncontrado").innerHTML = resultado
+
 
 }
 
@@ -90,7 +107,7 @@ function cargarProductos() {
                                 </tr>`
     })
 
-
+  
 }
 
 function guardarDatos(){

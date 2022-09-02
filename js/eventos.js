@@ -7,7 +7,7 @@ function focoEnCampos() {
         campo.addEventListener("keypress", (e)=> {
             
           if (e.key === "Enter") {
-                alert("Se pulso la tecla enter.")
+                sweetAlert("Se pulso la tecla enter.")
             }
         })
         

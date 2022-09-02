@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="/css/archivo.css">
     <script src="/js/miarchivo.js"></script>
     <script defer src="/js/eventos.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    
     <title>Poker Beer - Tienda</title>
 
 </head>
@@ -30,7 +33,7 @@
     <button class="button" onclick="buscarProducto()">BUSCAR PRODUCTO</button>
   
     <br>
-    <h2 id="productoEncontrado"></h2>
+    <table id="productoEncontrado"></table> 
    
    
     <br>
@@ -42,7 +45,7 @@
     <br>
     <br>
     
-    <button onclick="nuevoProducto()" class="fondoboton">AGREGAR PRODUCTO</button>
+    <button onclick="nuevoProducto()" class="fondoboton">GUARDAR PRODUCTO</button>
     <button onclick="recuperarDatos()">ATRAS</button>
     <br>
     <br>
